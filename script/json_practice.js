@@ -11,16 +11,22 @@ let emp = [
 let blog = [
     {title: "Post 1",
     date: "03/09/2022",
-    post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in augue purus. Aenean bibendum vestibulum suscipit. Pellentesque at fermentum lectus. Quisque sollicitudin luctus fringilla. Curabitur ultricies maximus congue. Curabitur ultricies leo ligula, vel iaculis purus hendrerit ut. Phasellus pretium sagittis urna eu malesuada."
+    post: "This is the first post"
 },
 {title: "Post 2",
 date: "03/09/2022",
-post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in augue purus. Aenean bibendum vestibulum suscipit. Pellentesque at fermentum lectus. Quisque sollicitudin luctus fringilla. Curabitur ultricies maximus congue. Curabitur ultricies leo ligula, vel iaculis purus hendrerit ut. Phasellus pretium sagittis urna eu malesuada."
+post: "This is a second post"
 }
 ]
 
 blog.forEach(element => {
-display.innerHTML +=  element.title + "<br>" +element.date + "<br>Post:" + element.post + "<br><br>";
+    // display.innerHTML +=  element.title + "<br>" +element.date + "<br>Post:" + element.post + "<br><br>";
+
+    display.innerHTML += `<h3> ${element.title} </h3>
+    <p class="date">${element.date}</p>
+    <p class="post">${element.post}</p>
+    
+    `;
     
 })
 
