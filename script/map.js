@@ -1,11 +1,11 @@
 let map;
 
 function initMap() {
-
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
+    getLocation();
+//   map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: -34.397, lng: 150.644 },
+//     zoom: 8,
+//   });
 }
 
 
@@ -22,8 +22,10 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    long = position.coords.longitude;
-    lat = position.coords.latitude;
-    myElement.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: position.coords.latitude, lng: position.coords.longitude },
+    zoom: 15,
+  });
+    // myElement.innerHTML = "Latitude: " + position.coords.latitude +
+    // "<br>Longitude: " + position.coords.longitude;
 }

@@ -20,34 +20,31 @@ post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in 
 ]
 
 blog.forEach(element => {
-display.innerHTML +=  element.title + "<br>" +element.date + "<br>Post:" + element.post;
+display.innerHTML +=  element.title + "<br>" +element.date + "<br>Post:" + element.post + "<br><br>";
     
 })
 
 
 
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
+// function readTextFile(file, callback) {
+//     var rawFile = new XMLHttpRequest();
+//     rawFile.overrideMimeType("application/json");
+//     rawFile.open("GET", file, true);
+//     rawFile.onreadystatechange = function() {
+//         if (rawFile.readyState === 4 && rawFile.status == "200") {
+//             callback(rawFile.responseText);
+//         }
+//     }
+//     rawFile.send(null);
+// }
 
-JSON.parse()
-JSON.stringify()
 
-usage:
-readTextFile("./json/test.json", function(text){
-    var data = JSON.parse(text);
-    data.forEach(element => {
-        display.innerText += element.name + "\n";
-    });
-    display.innerText = data[0].name;
-    console.log(data);
-});
+// usage:
+// readTextFile("./json/test.json", function(text){
+//     var data = JSON.parse(text);
+//     data.forEach(element => {
+//         display.innerText += element.name + "\n";
+//     });
+//     console.log(data);
+// });
 
