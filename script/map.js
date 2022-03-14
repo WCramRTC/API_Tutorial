@@ -1,31 +1,27 @@
 let map;
 
 function initMap() {
-    getLocation();
-//   map = new google.maps.Map(document.getElementById("map"), {
-//     center: { lat: -34.397, lng: 150.644 },
-//     zoom: 8,
-//   });
+  getLocation();
+
 }
-
-
 
 function getLocation() {
     
-    if(navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    }
-    else {
-            myElement.innerHTML = "Geolocation is not supported by this browser";
-        }
-    
+  if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+  }
+  else {
+          myElement.innerHTML = "Geolocation is not supported by this browser";
+      }
 }
 
 function showPosition(position) {
+  let longitude = position.coords.longitude;
+  let latitude = position.coords.latitude;
+
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: position.coords.latitude, lng: position.coords.longitude },
-    zoom: 15,
+    center: { lat: latitude, lng: longitude },
+    zoom: 8,
   });
-    // myElement.innerHTML = "Latitude: " + position.coords.latitude +
-    // "<br>Longitude: " + position.coords.longitude;
+
 }

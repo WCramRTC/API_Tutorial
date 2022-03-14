@@ -11,9 +11,15 @@ function getLocation() {
     
 }
 
+
 function showPosition(position) {
-    myElement.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
+    let long = position.coords.longitude.toFixed(0);
+    let lat = position.coords.latitude.toFixed(0);
+
+    myElement.innerHTML = "Latitude: " + lat +
+    "<br>Longitude: " + long;
 }
 
 getLocation();
+
+  

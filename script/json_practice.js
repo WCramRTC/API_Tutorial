@@ -20,14 +20,13 @@ post: "This is a second post"
 ]
 
 blog.forEach(element => {
-    // display.innerHTML +=  element.title + "<br>" +element.date + "<br>Post:" + element.post + "<br><br>";
+    display.innerText +=  "\n" + element.title + "\n" +element.date + "\nPost:" + element.post + "\n\n";
 
-    display.innerHTML += `<h3> ${element.title} </h3>
-    <p class="date">${element.date}</p>
-    <p class="post">${element.post}</p>
+    //  display.innerHTML += `<h3> ${element.title} </h3>
+    // <p class="date">${element.date}</p>
+    // <p class="post">${element.post}</p>
     
-    `;
-    
+    // `;
 })
 
 
