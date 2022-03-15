@@ -1,5 +1,7 @@
 let myElement = document.getElementById("demo");
 
+
+
 function getLocation() {
     
     if(navigator.geolocation) {
